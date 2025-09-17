@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Samadhan - Smart Civic Issue Reporting Platform | SIH 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h3>🏛️ E-Samadhan</h3>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#problem" class="nav-link">Problem & Solution</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#technology" class="nav-link">Technology</a></li>
+                <li><a href="#architecture" class="nav-link">Architecture</a></li>
+                <li><a href="#impact" class="nav-link">Impact</a></li>
+                <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <span>🏆 Smart India Hackathon 2025 - Problem Statement #31</span>
+                    </div>
+                    <h1 class="hero-title">Revolutionizing Civic Engagement with AI-Powered Issue Reporting</h1>
+                    <p class="hero-subtitle">A comprehensive platform that connects citizens and authorities through intelligent issue reporting, real-time tracking, and community-driven solutions for a cleaner, better India.</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">50,000+</div>
+                            <div class="stat-label">Expected Users</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">75%</div>
+                            <div class="stat-label">Response Time Reduction</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">85%</div>
+                            <div class="stat-label">Citizen Satisfaction</div>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <button class="btn btn--primary btn--lg" onclick="scrollToSection('features')">
+                            🚀 Explore Features
+                        </button>
+                        <button class="btn btn--outline btn--lg" onclick="openDemo()">
+                            📱 Try Demo
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="demo-phone">
+                        <div class="phone-screen">
+                            <div class="demo-app">
+                                <div class="app-header">
+                                    <h4>🏛️ E-Samadhan</h4>
+                                </div>
+                                <div class="issue-card demo-issue">
+                                    <div class="issue-status status--success">✅ Resolved</div>
+                                    <div class="issue-title">Pothole Fixed on Main Street</div>
+                                    <div class="issue-location">📍 Ranchi, Jharkhand</div>
+                                    <div class="issue-votes">👍 23 upvotes</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Statement Section -->
+    <section id="problem" class="problem-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Problem Statement & Solution</h2>
+                <p>Addressing SIH 2025 Challenge #31 with innovative technology</p>
+            </div>
+            
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-header">
+                        <h3>🎯 The Challenge</h3>
+                        <div class="org-badge">Government of Jharkhand</div>
+                    </div>
+                    <div class="problem-content">
+                        <h4>Crowdsourced Civic Issue Reporting and Resolution System</h4>
+                        <p>Develop a comprehensive platform that enables citizens to report civic issues through geo-tagged submissions with multimedia support, incorporates AI-powered classification, and provides transparent dashboards for both citizens and authorities.</p>
+                        <div class="challenge-points">
+                            <div class="challenge-point">
+                                <span class="challenge-icon">📱</span>
+                                <span>User-friendly mobile and web interfaces</span>
+                            </div>
+                            <div class="challenge-point">
+                                <span class="challenge-icon">🗺️</span>
+                                <span>Geo-tagged issue reporting with multimedia</span>
+                            </div>
+                            <div class="challenge-point">
+                                <span class="challenge-icon">🤖</span>
+                                <span>AI-powered automatic classification</span>
+                            </div>
+                            <div class="challenge-point">
+                                <span class="challenge-icon">📊</span>
+                                <span>Transparent dashboards for all stakeholders</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-header">
+                        <h3>💡 Our Solution</h3>
+                        <div class="theme-badge">Clean & Green Technology</div>
+                    </div>
+                    <div class="solution-content">
+                        <h4>E-Samadhan Platform</h4>
+                        <p>A cutting-edge platform that bridges the gap between citizens and authorities through intelligent automation, community engagement, and transparent governance.</p>
+                        <div class="solution-benefits">
+                            <div class="benefit">
+                                <span class="benefit-icon">⚡</span>
+                                <div>
+                                    <strong>Instant Issue Processing</strong>
+                                    <p>AI-powered classification routes issues to appropriate departments within seconds</p>
+                                </div>
+                            </div>
+                            <div class="benefit">
+                                <span class="benefit-icon">🌐</span>
+                                <div>
+                                    <strong>Community-Driven Validation</strong>
+                                    <p>Crowdsourced verification prevents spam and ensures issue authenticity</p>
+                                </div>
+                            </div>
+                            <div class="benefit">
+                                <span class="benefit-icon">📈</span>
+                                <div>
+                                    <strong>Data-Driven Insights</strong>
+                                    <p>Advanced analytics help authorities make informed decisions and optimize resources</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Platform Features</h2>
+                <p>Comprehensive tools for modern civic engagement</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card" data-feature="ai">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI-Powered Classification</h3>
+                    <p>Automatic categorization of issues using machine learning</p>
+                    <div class="feature-benefits">
+                        <span class="benefit-tag">95% accuracy</span>
+                        <span class="benefit-tag">Instant routing</span>
+                        <span class="benefit-tag">Priority assessment</span>
+                    </div>
+                    <button class="btn btn--outline" onclick="showFeatureDemo('ai')">View Demo</button>
+                </div>
+
+                <div class="feature-card" data-feature="geo">
+                    <div class="feature-icon">📍</div>
+                    <h3>Geo-Tagged Reporting</h3>
+                    <p>Precise location capture with Google Maps integration</p>
+                    <div class="feature-benefits">
+                        <span class="benefit-tag">GPS accuracy</span>
+                        <span class="benefit-tag">Address validation</span>
+                        <span class="benefit-tag">Hotspot analysis</span>
+                    </div>
+                    <button class="btn btn--outline" onclick="showFeatureDemo('geo')">View Demo</button>
+                </div>
+
+                <div class="feature-card" data-feature="community">
+                    <div class="feature-icon">👥</div>
+                    <h3>Community Validation</h3>
+                    <p>Crowdsourced verification and upvoting system</p>
+                    <div class="feature-benefits">
+                        <span class="benefit-tag">Spam prevention</span>
+                        <span class="benefit-tag">Issue verification</span>
+                        <span class="benefit-tag">Community engagement</span>
+                    </div>
+                    <button class="btn btn--outline" onclick="showFeatureDemo('community')">View Demo</button>
+                </div>
+
+                <div class="feature-card" data-feature="tracking">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Real-time Tracking</h3>
+                    <p>Live status updates and notification system</p>
+                    <div class="feature-benefits">
+                        <span class="benefit-tag">Instant alerts</span>
+                        <span class="benefit-tag">Status transparency</span>
+                        <span class="benefit-tag">Progress tracking</span>
+                    </div>
+                    <button class="btn btn--outline" onclick="showFeatureDemo('tracking')">View Demo</button>
+                </div>
+
+                <div class="feature-card" data-feature="dashboard">
+                    <div class="feature-icon">📊</div>
+                    <h3>Authority Dashboard</h3>
+                    <p>Comprehensive management interface for officials</p>
+                    <div class="feature-benefits">
+                        <span class="benefit-tag">Workflow management</span>
+                        <span class="benefit-tag">Performance analytics</span>
+                        <span class="benefit-tag">Resource optimization</span>
+                    </div>
+                    <button class="btn btn--outline" onclick="showFeatureDemo('dashboard')">View Demo</button>
+                </div>
+
+                <div class="feature-card" data-feature="gamification">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Gamification System</h3>
+                    <p>Badges and rewards for active participation</p>
+                    <div class="feature-benefits">
+                        <span class="benefit-tag">User engagement</span>
+                        <span class="benefit-tag">Community building</span>
+                        <span class="benefit-tag">Recognition system</span>
+                    </div>
+                    <button class="btn btn--outline" onclick="showFeatureDemo('gamification')">View Demo</button>
+                </div>
+            </div>
+
+            <!-- Interactive Demo Panel -->
+            <div class="demo-panel" id="demo-panel">
+                <div class="demo-content">
+                    <button class="demo-close" onclick="closeDemo()">×</button>
+                    <div id="demo-content-area">
+                        <!-- Dynamic demo content will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack Section -->
+    <section id="technology" class="tech-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Technology Stack</h2>
+                <p>Built with cutting-edge technologies for scalability and performance</p>
+            </div>
+            
+            <div class="tech-grid">
+                <div class="tech-category">
+                    <h3>Frontend</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">React.js</div>
+                        <div class="tech-item">TypeScript</div>
+                        <div class="tech-item">Tailwind CSS</div>
+                        <div class="tech-item">PWA</div>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>Mobile</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">React Native</div>
+                        <div class="tech-item">Flutter</div>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>Backend</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">Node.js</div>
+                        <div class="tech-item">Express.js</div>
+                        <div class="tech-item">JWT Auth</div>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>Database</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">PostgreSQL</div>
+                        <div class="tech-item">Redis</div>
+                        <div class="tech-item">Elasticsearch</div>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>AI/ML</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">TensorFlow.js</div>
+                        <div class="tech-item">OpenCV</div>
+                        <div class="tech-item">NLP Models</div>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>Cloud & DevOps</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">AWS S3</div>
+                        <div class="tech-item">Google Maps API</div>
+                        <div class="tech-item">Docker</div>
+                        <div class="tech-item">Kubernetes</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section id="architecture" class="architecture-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>System Architecture</h2>
+                <p>Scalable, secure, and efficient system design</p>
+            </div>
+            
+            <div class="architecture-diagram">
+                <div class="arch-layer">
+                    <h3>User Interface Layer</h3>
+                    <div class="arch-components">
+                        <div class="arch-component">Web App (React)</div>
+                        <div class="arch-component">Mobile App (React Native)</div>
+                        <div class="arch-component">Admin Dashboard</div>
+                    </div>
+                </div>
+                
+                <div class="arch-layer">
+                    <h3>API Gateway & Authentication</h3>
+                    <div class="arch-components">
+                        <div class="arch-component">JWT Authentication</div>
+                        <div class="arch-component">Rate Limiting</div>
+                        <div class="arch-component">API Versioning</div>
+                    </div>
+                </div>
+                
+                <div class="arch-layer">
+                    <h3>Microservices Layer</h3>
+                    <div class="arch-components">
+                        <div class="arch-component">Issue Service</div>
+                        <div class="arch-component">User Service</div>
+                        <div class="arch-component">Notification Service</div>
+                        <div class="arch-component">AI Classification Service</div>
+                    </div>
+                </div>
+                
+                <div class="arch-layer">
+                    <h3>Data & Storage Layer</h3>
+                    <div class="arch-components">
+                        <div class="arch-component">PostgreSQL</div>
+                        <div class="arch-component">Redis Cache</div>
+                        <div class="arch-component">AWS S3</div>
+                        <div class="arch-component">Elasticsearch</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="impact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Expected Impact</h2>
+                <p>Transforming civic governance through technology</p>
+            </div>
+            
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-number">60%</div>
+                    <div class="impact-label">Issue Resolution Improvement</div>
+                    <p>Faster resolution through automated routing and priority classification</p>
+                </div>
+                
+                <div class="impact-card">
+                    <div class="impact-number">40%</div>
+                    <div class="impact-label">Operational Efficiency</div>
+                    <p>Reduced manual work and optimized resource allocation</p>
+                </div>
+                
+                <div class="impact-card">
+                    <div class="impact-number">85%</div>
+                    <div class="impact-label">Citizen Satisfaction</div>
+                    <p>Improved transparency and faster response times</p>
+                </div>
+                
+                <div class="impact-card">
+                    <div class="impact-number">50,000+</div>
+                    <div class="impact-label">Expected Users</div>
+                    <p>Wide adoption across Jharkhand municipalities</p>
+                </div>
+            </div>
+
+            <div class="analytics-dashboard">
+                <h3>Live Analytics Preview</h3>
+                <div class="analytics-grid">
+                    <div class="analytics-card">
+                        <div class="analytics-header">
+                            <h4>Issue Overview</h4>
+                            <span class="status--success">Live</span>
+                        </div>
+                        <div class="analytics-stats">
+                            <div class="stat-row">
+                                <span>Total Issues:</span>
+                                <strong>1,247</strong>
+                            </div>
+                            <div class="stat-row">
+                                <span>Resolved:</span>
+                                <strong>892</strong>
+                            </div>
+                            <div class="stat-row">
+                                <span>In Progress:</span>
+                                <strong>234</strong>
+                            </div>
+                            <div class="stat-row">
+                                <span>Open:</span>
+                                <strong>121</strong>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="analytics-card">
+                        <div class="analytics-header">
+                            <h4>Performance Metrics</h4>
+                            <span class="status--info">Updated</span>
+                        </div>
+                        <div class="analytics-stats">
+                            <div class="stat-row">
+                                <span>Avg Resolution Time:</span>
+                                <strong>4.2 days</strong>
+                            </div>
+                            <div class="stat-row">
+                                <span>Satisfaction Rate:</span>
+                                <strong>87%</strong>
+                            </div>
+                            <div class="stat-row">
+                                <span>Response Time:</span>
+                                <strong>2.3 hours</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section id="roadmap" class="roadmap-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Implementation Roadmap</h2>
+                <p>Phased development approach for systematic delivery</p>
+            </div>
+            
+            <div class="roadmap-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">1</div>
+                    <div class="timeline-content">
+                        <h3>Phase 1: Foundation</h3>
+                        <div class="timeline-duration">8 weeks</div>
+                        <div class="timeline-features">
+                            <span class="feature-tag">User Authentication</span>
+                            <span class="feature-tag">Basic Reporting</span>
+                            <span class="feature-tag">Image Upload</span>
+                            <span class="feature-tag">Location Services</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker">2</div>
+                    <div class="timeline-content">
+                        <h3>Phase 2: Core Features</h3>
+                        <div class="timeline-duration">10 weeks</div>
+                        <div class="timeline-features">
+                            <span class="feature-tag">Status Tracking</span>
+                            <span class="feature-tag">Department Routing</span>
+                            <span class="feature-tag">Notifications</span>
+                            <span class="feature-tag">Search & Filter</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker">3</div>
+                    <div class="timeline-content">
+                        <h3>Phase 3: Advanced Features</h3>
+                        <div class="timeline-duration">14 weeks</div>
+                        <div class="timeline-features">
+                            <span class="feature-tag">Community Validation</span>
+                            <span class="feature-tag">Real-time Updates</span>
+                            <span class="feature-tag">Mobile App</span>
+                            <span class="feature-tag">Public Dashboard</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker">4</div>
+                    <div class="timeline-content">
+                        <h3>Phase 4: AI/ML Integration</h3>
+                        <div class="timeline-duration">12 weeks</div>
+                        <div class="timeline-features">
+                            <span class="feature-tag">Image Classification</span>
+                            <span class="feature-tag">Auto-categorization</span>
+                            <span class="feature-tag">Sentiment Analysis</span>
+                            <span class="feature-tag">Predictive Analytics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>🏛️ E-Samadhan</h3>
+                    <p>Bridging citizens and authorities through technology</p>
+                </div>
+                <div class="footer-info">
+                    <div class="footer-section">
+                        <h4>Smart India Hackathon 2025</h4>
+                        <p>Problem Statement #31</p>
+                        <p>Government of Jharkhand</p>
+                        <p>Clean & Green Technology Theme</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Contact</h4>
+                        <p>📧 team@E-Samadhan.in</p>
+                        <p>📱 +91 9876543210</p>
+                        <p>🌐 www.E-Samadhan.in</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 E-Samadhan. Built for Smart India Hackathon 2025.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
