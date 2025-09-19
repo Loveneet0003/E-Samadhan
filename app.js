@@ -53,12 +53,16 @@ const analyticsData = {
 // Initialize application
 document.addEventListener('DOMContentLoaded', function() {
     console.log('E-Samadhan app initializing...');
-    initializeNavigation();
-    initializeScrollEffects();
-    initializeDemoPanel();
-    updateAnalytics();
-    startLiveUpdates();
-    console.log('E-Samadhan app initialized successfully');
+    try {
+        initializeNavigation();
+        initializeScrollEffects();
+        initializeDemoPanel();
+        updateAnalytics();
+        startLiveUpdates();
+        console.log('E-Samadhan app initialized successfully');
+    } catch (error) {
+        console.error('Error initializing E-Samadhan app:', error);
+    }
 });
 
 // Navigation functionality - FIXED
@@ -1074,29 +1078,36 @@ const taskCategories = {
 function showTaskRegistration(category) {
     console.log('Showing task registration for category:', category);
     
-    const modal = document.getElementById('task-registration-modal');
-    const modalTitle = document.getElementById('modal-title');
-    const modalContent = document.getElementById('task-registration-content');
-    
-    if (!modal || !modalTitle || !modalContent) {
-        console.error('Modal elements not found');
-        return;
+    try {
+        const modal = document.getElementById('task-registration-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalContent = document.getElementById('task-registration-content');
+        
+        if (!modal || !modalTitle || !modalContent) {
+            console.error('Modal elements not found');
+            showNotification('Task registration modal not found. Please refresh the page.', 'error');
+            return;
+        }
+        
+        const categoryData = taskCategories[category];
+        if (!categoryData) {
+            console.error('Category not found:', category);
+            showNotification('Task category not found. Please try again.', 'error');
+            return;
+        }
+        
+        modalTitle.textContent = `${categoryData.icon} ${categoryData.name} - Task Registration`;
+        modalContent.innerHTML = generateTaskRegistrationForm(category, categoryData);
+        
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        
+        // Initialize form interactions
+        initializeTaskRegistrationForm();
+    } catch (error) {
+        console.error('Error showing task registration:', error);
+        showNotification('Error opening task registration. Please try again.', 'error');
     }
-    
-    const categoryData = taskCategories[category];
-    if (!categoryData) {
-        console.error('Category not found:', category);
-        return;
-    }
-    
-    modalTitle.textContent = `${categoryData.icon} ${categoryData.name} - Task Registration`;
-    modalContent.innerHTML = generateTaskRegistrationForm(category, categoryData);
-    
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-    
-    // Initialize form interactions
-    initializeTaskRegistrationForm();
 }
 
 function generateTaskRegistrationForm(category, categoryData) {

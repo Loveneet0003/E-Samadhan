@@ -1,3 +1,14 @@
+/* Basic Reset and Fallbacks */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
 :root {
   /* Primitive Color Tokens */
   --color-white: rgba(255, 255, 255, 1);
@@ -1488,6 +1499,8 @@ section {
 /* Task Registration Section */
 .tasks-section {
   background: var(--color-background);
+  background-color: #fcfcf9; /* Fallback */
+  padding: 80px 0;
 }
 
 .tasks-overview {
@@ -1503,12 +1516,18 @@ section {
 
 .stat-card {
   background: var(--color-surface);
+  background-color: #ffffff; /* Fallback */
   border-radius: var(--radius-lg);
+  border-radius: 12px; /* Fallback */
   padding: var(--space-20);
+  padding: 20px; /* Fallback */
   text-align: center;
   box-shadow: var(--shadow-sm);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02); /* Fallback */
   border: 1px solid var(--color-card-border);
+  border: 1px solid rgba(94, 82, 64, 0.12); /* Fallback */
   transition: all var(--duration-normal) var(--ease-standard);
+  transition: all 250ms cubic-bezier(0.16, 1, 0.3, 1); /* Fallback */
 }
 
 .stat-card:hover {
@@ -1518,7 +1537,9 @@ section {
 
 .stat-card .stat-icon {
   font-size: 48px;
+  font-size: 48px; /* Fallback */
   margin-bottom: var(--space-12);
+  margin-bottom: 12px; /* Fallback */
   display: block;
 }
 
@@ -1530,15 +1551,22 @@ section {
 
 .stat-number {
   font-size: var(--font-size-3xl);
+  font-size: 24px; /* Fallback */
   font-weight: var(--font-weight-bold);
+  font-weight: 600; /* Fallback */
   color: var(--color-primary);
+  color: #21808d; /* Fallback */
   margin-bottom: var(--space-4);
+  margin-bottom: 4px; /* Fallback */
 }
 
 .stat-label {
   color: var(--color-text-secondary);
+  color: #626c71; /* Fallback */
   font-size: var(--font-size-sm);
+  font-size: 12px; /* Fallback */
   font-weight: var(--font-weight-medium);
+  font-weight: 500; /* Fallback */
 }
 
 .task-categories h3 {
@@ -1556,12 +1584,18 @@ section {
 
 .category-card {
   background: var(--color-surface);
+  background-color: #ffffff; /* Fallback */
   border-radius: var(--radius-lg);
+  border-radius: 12px; /* Fallback */
   padding: var(--space-24);
+  padding: 24px; /* Fallback */
   text-align: center;
   box-shadow: var(--shadow-sm);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02); /* Fallback */
   border: 1px solid var(--color-card-border);
+  border: 1px solid rgba(94, 82, 64, 0.12); /* Fallback */
   transition: all var(--duration-normal) var(--ease-standard);
+  transition: all 250ms cubic-bezier(0.16, 1, 0.3, 1); /* Fallback */
   position: relative;
   overflow: hidden;
 }
@@ -1608,17 +1642,25 @@ section {
   display: flex;
   justify-content: space-between;
   margin-bottom: var(--space-20);
+  margin-bottom: 20px; /* Fallback */
   padding: var(--space-12);
+  padding: 12px; /* Fallback */
   background: var(--color-bg-1);
+  background-color: rgba(59, 130, 246, 0.08); /* Fallback */
   border-radius: var(--radius-base);
+  border-radius: 8px; /* Fallback */
   border: 1px solid var(--color-primary);
+  border: 1px solid #21808d; /* Fallback */
 }
 
 .task-count,
 .volunteer-count {
   font-size: var(--font-size-xs);
+  font-size: 11px; /* Fallback */
   color: var(--color-primary);
+  color: #21808d; /* Fallback */
   font-weight: var(--font-weight-medium);
+  font-weight: 500; /* Fallback */
 }
 
 /* Task Registration Modal */
@@ -1876,11 +1918,17 @@ section {
 
 .story-card {
   background: var(--color-surface);
+  background-color: #ffffff; /* Fallback */
   border-radius: var(--radius-lg);
+  border-radius: 12px; /* Fallback */
   padding: var(--space-20);
+  padding: 20px; /* Fallback */
   box-shadow: var(--shadow-sm);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02); /* Fallback */
   border: 1px solid var(--color-card-border);
+  border: 1px solid rgba(94, 82, 64, 0.12); /* Fallback */
   transition: all var(--duration-normal) var(--ease-standard);
+  transition: all 250ms cubic-bezier(0.16, 1, 0.3, 1); /* Fallback */
 }
 
 .story-card:hover {
