@@ -226,6 +226,9 @@ function showFeatureDemo(featureType) {
         case 'gamification':
             content = generateGamificationDemo();
             break;
+        case 'tasks':
+            content = generateTaskRegistrationDemo();
+            break;
         default:
             content = '<h3>🚀 Demo Coming Soon!</h3><p>This feature demonstration will be available in the full implementation.</p>';
     }
@@ -643,6 +646,158 @@ function generateDashboardDemo() {
     `;
 }
 
+// Generate Task Registration Demo
+function generateTaskRegistrationDemo() {
+    return `
+        <div class="demo-container">
+            <h2>👷 Task Registration System</h2>
+            <div class="demo-grid">
+                <div class="demo-categories">
+                    <h3>Available Task Categories</h3>
+                    <div class="demo-category-list">
+                        <div class="demo-category-item" onclick="simulateTaskCategoryClick('infrastructure')">
+                            <span class="category-icon">🛠️</span>
+                            <div class="category-info">
+                                <strong>Infrastructure Maintenance</strong>
+                                <p>Street light repairs, road maintenance, signboard installation</p>
+                                <span class="category-stats">23 Active Tasks • 156 Volunteers</span>
+                            </div>
+                        </div>
+                        <div class="demo-category-item" onclick="simulateTaskCategoryClick('environment')">
+                            <span class="category-icon">🌱</span>
+                            <div class="category-info">
+                                <strong>Environmental Cleanup</strong>
+                                <p>Garbage collection, tree planting, water body cleaning</p>
+                                <span class="category-stats">18 Active Tasks • 203 Volunteers</span>
+                            </div>
+                        </div>
+                        <div class="demo-category-item" onclick="simulateTaskCategoryClick('safety')">
+                            <span class="category-icon">🛡️</span>
+                            <div class="category-info">
+                                <strong>Safety & Security</strong>
+                                <p>Traffic management, safety awareness, emergency response</p>
+                                <span class="category-stats">12 Active Tasks • 89 Volunteers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="demo-registration-form">
+                    <h3>Registration Process</h3>
+                    <div class="demo-form-steps">
+                        <div class="step-item completed">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Personal Information</h4>
+                                <p>Name, contact details, address verification</p>
+                            </div>
+                        </div>
+                        <div class="step-item completed">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Skills Assessment</h4>
+                                <p>Select relevant skills and experience level</p>
+                            </div>
+                        </div>
+                        <div class="step-item active">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Task Selection</h4>
+                                <p>Choose specific tasks based on your interests</p>
+                            </div>
+                        </div>
+                        <div class="step-item pending">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Availability</h4>
+                                <p>Set your preferred time slots and schedule</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="demo-task-selection">
+                        <h4>🎯 Task Selection Example</h4>
+                        <div class="demo-task-item">
+                            <div class="task-header">
+                                <strong>Street Light Repair</strong>
+                                <span class="task-difficulty">Medium</span>
+                            </div>
+                            <p>Fix non-functional street lights in residential areas</p>
+                            <div class="task-details">
+                                <span>⏱️ Duration: 2-3 hours</span>
+                                <span>📍 Location: Ward 15, Zone B</span>
+                                <span>💰 Compensation: ₹500 per task</span>
+                            </div>
+                            <div class="task-skills">
+                                <span class="skill-tag">Electrical work</span>
+                                <span class="skill-tag">Safety protocols</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="demo-volunteer-benefits">
+                <h3>Volunteer Benefits</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <span class="benefit-icon">💰</span>
+                        <div>
+                            <strong>Compensation</strong>
+                            <p>Earn money while contributing to community</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🏆</span>
+                        <div>
+                            <strong>Recognition</strong>
+                            <p>Build reputation and earn community respect</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">📚</span>
+                        <div>
+                            <strong>Skill Development</strong>
+                            <p>Learn new skills and gain experience</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🤝</span>
+                        <div>
+                            <strong>Community Impact</strong>
+                            <p>Make a real difference in your neighborhood</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="demo-success-stories">
+                <h3>Success Stories</h3>
+                <div class="story-item">
+                    <div class="story-avatar">👨‍🔧</div>
+                    <div class="story-content">
+                        <strong>Rajesh Kumar</strong>
+                        <p>"I've completed 15 street light repairs and earned ₹7,500. The platform made it easy to find work in my area."</p>
+                        <div class="story-metrics">
+                            <span>15 Tasks Completed</span>
+                            <span>₹7,500 Earned</span>
+                            <span>4.9 Rating</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+// Simulate task category click
+function simulateTaskCategoryClick(category) {
+    showNotification(`🎯 Clicking on ${category} category would open the registration form`, 'info');
+}
+
+// Global function for task category simulation
+window.simulateTaskCategoryClick = simulateTaskCategoryClick;
+
 // Generate Gamification Demo
 function generateGamificationDemo() {
     return `
@@ -772,6 +927,398 @@ function showAdditionalInfo() {
 // Global functions for demo interactions
 window.simulateVote = simulateVote;
 window.showAdditionalInfo = showAdditionalInfo;
+
+// Task Registration Data
+const taskCategories = {
+    infrastructure: {
+        name: "Infrastructure Maintenance",
+        icon: "🛠️",
+        description: "Street light repairs, road maintenance, signboard installation",
+        tasks: [
+            {
+                id: "INF-001",
+                title: "Street Light Repair",
+                description: "Fix non-functional street lights in residential areas",
+                location: "Ward 15, Zone B",
+                duration: "2-3 hours",
+                difficulty: "Medium",
+                requiredSkills: ["Electrical work", "Safety protocols"],
+                toolsProvided: true,
+                compensation: "₹500 per task"
+            },
+            {
+                id: "INF-002", 
+                title: "Road Sign Installation",
+                description: "Install new traffic signs and direction boards",
+                location: "Main roads, Zone A",
+                duration: "1-2 hours",
+                difficulty: "Easy",
+                requiredSkills: ["Basic construction", "Reading plans"],
+                toolsProvided: true,
+                compensation: "₹300 per task"
+            },
+            {
+                id: "INF-003",
+                title: "Pothole Patching",
+                description: "Fill small potholes with appropriate materials",
+                location: "Various locations",
+                duration: "3-4 hours",
+                difficulty: "Medium",
+                requiredSkills: ["Construction work", "Material handling"],
+                toolsProvided: true,
+                compensation: "₹800 per task"
+            }
+        ]
+    },
+    environment: {
+        name: "Environmental Cleanup",
+        icon: "🌱",
+        description: "Garbage collection, tree planting, water body cleaning",
+        tasks: [
+            {
+                id: "ENV-001",
+                title: "Tree Plantation Drive",
+                description: "Plant and maintain saplings in designated areas",
+                location: "Parks and green belts",
+                duration: "4-6 hours",
+                difficulty: "Easy",
+                requiredSkills: ["Gardening", "Plant care"],
+                toolsProvided: true,
+                compensation: "₹400 per day"
+            },
+            {
+                id: "ENV-002",
+                title: "Water Body Cleanup",
+                description: "Clean ponds and water bodies from waste",
+                location: "Local ponds and lakes",
+                duration: "3-5 hours",
+                difficulty: "Medium",
+                requiredSkills: ["Manual labor", "Safety awareness"],
+                toolsProvided: true,
+                compensation: "₹600 per day"
+            },
+            {
+                id: "ENV-003",
+                title: "Waste Segregation",
+                description: "Help with waste segregation at collection points",
+                location: "Various collection centers",
+                duration: "2-3 hours",
+                difficulty: "Easy",
+                requiredSkills: ["Basic knowledge of waste types"],
+                toolsProvided: true,
+                compensation: "₹300 per day"
+            }
+        ]
+    },
+    safety: {
+        name: "Safety & Security",
+        icon: "🛡️",
+        description: "Traffic management, safety awareness, emergency response",
+        tasks: [
+            {
+                id: "SAF-001",
+                title: "Traffic Management",
+                description: "Assist with traffic flow during peak hours",
+                location: "Major intersections",
+                duration: "2-4 hours",
+                difficulty: "Medium",
+                requiredSkills: ["Traffic rules", "Communication"],
+                toolsProvided: true,
+                compensation: "₹500 per shift"
+            },
+            {
+                id: "SAF-002",
+                title: "Safety Awareness Campaign",
+                description: "Conduct safety awareness programs in communities",
+                location: "Schools and community centers",
+                duration: "3-4 hours",
+                difficulty: "Easy",
+                requiredSkills: ["Public speaking", "Safety knowledge"],
+                toolsProvided: true,
+                compensation: "₹400 per session"
+            }
+        ]
+    },
+    community: {
+        name: "Community Development",
+        icon: "🤝",
+        description: "Event organization, skill sharing, community outreach",
+        tasks: [
+            {
+                id: "COM-001",
+                title: "Community Event Organization",
+                description: "Help organize community events and festivals",
+                location: "Community centers",
+                duration: "6-8 hours",
+                difficulty: "Medium",
+                requiredSkills: ["Event management", "Coordination"],
+                toolsProvided: true,
+                compensation: "₹600 per event"
+            },
+            {
+                id: "COM-002",
+                title: "Skill Sharing Workshop",
+                description: "Conduct workshops to share your skills with others",
+                location: "Community centers",
+                duration: "2-3 hours",
+                difficulty: "Easy",
+                requiredSkills: ["Teaching", "Specific skill expertise"],
+                toolsProvided: true,
+                compensation: "₹500 per workshop"
+            }
+        ]
+    }
+};
+
+// Task Registration Functions
+function showTaskRegistration(category) {
+    console.log('Showing task registration for category:', category);
+    
+    const modal = document.getElementById('task-registration-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalContent = document.getElementById('task-registration-content');
+    
+    if (!modal || !modalTitle || !modalContent) {
+        console.error('Modal elements not found');
+        return;
+    }
+    
+    const categoryData = taskCategories[category];
+    if (!categoryData) {
+        console.error('Category not found:', category);
+        return;
+    }
+    
+    modalTitle.textContent = `${categoryData.icon} ${categoryData.name} - Task Registration`;
+    modalContent.innerHTML = generateTaskRegistrationForm(category, categoryData);
+    
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    
+    // Initialize form interactions
+    initializeTaskRegistrationForm();
+}
+
+function generateTaskRegistrationForm(category, categoryData) {
+    return `
+        <div class="task-registration-form">
+            <div class="form-section">
+                <h4><span class="icon">👤</span> Personal Information</h4>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age *</label>
+                        <input type="number" id="age" name="age" min="18" max="65" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address *</label>
+                    <textarea id="address" name="address" placeholder="Enter your complete address" required></textarea>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h4><span class="icon">🛠️</span> Skills & Experience</h4>
+                <div class="form-group">
+                    <label>Relevant Skills (Select all that apply)</label>
+                    <div class="skill-tags">
+                        ${getSkillTags(category).map(skill => 
+                            `<span class="skill-tag" data-skill="${skill}">${skill}</span>`
+                        ).join('')}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="experience">Previous Experience</label>
+                    <textarea id="experience" name="experience" placeholder="Describe any relevant volunteer or work experience"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="motivation">Why do you want to volunteer for this category?</label>
+                    <textarea id="motivation" name="motivation" placeholder="Tell us about your motivation and what you hope to achieve" required></textarea>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h4><span class="icon">📅</span> Availability</h4>
+                <div class="form-group">
+                    <label>Preferred Time Slots</label>
+                    <div class="availability-slots">
+                        <div class="availability-slot" data-slot="morning">
+                            <div class="day">Morning</div>
+                            <div class="time">8:00 AM - 12:00 PM</div>
+                        </div>
+                        <div class="availability-slot" data-slot="afternoon">
+                            <div class="day">Afternoon</div>
+                            <div class="time">12:00 PM - 4:00 PM</div>
+                        </div>
+                        <div class="availability-slot" data-slot="evening">
+                            <div class="day">Evening</div>
+                            <div class="time">4:00 PM - 8:00 PM</div>
+                        </div>
+                        <div class="availability-slot" data-slot="weekend">
+                            <div class="day">Weekend</div>
+                            <div class="time">Any time</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="availability">Additional Availability Notes</label>
+                    <textarea id="availability" name="availability" placeholder="Any specific days or times you're available"></textarea>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h4><span class="icon">🎯</span> Task Preferences</h4>
+                <div class="form-group">
+                    <label>Select Tasks You're Interested In</label>
+                    ${categoryData.tasks.map(task => `
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="task-${task.id}" name="selectedTasks" value="${task.id}">
+                            <label for="task-${task.id}">
+                                <strong>${task.title}</strong> - ${task.description}
+                                <br><small>Duration: ${task.duration} | Difficulty: ${task.difficulty} | Compensation: ${task.compensation}</small>
+                            </label>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h4><span class="icon">📋</span> Additional Information</h4>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the terms and conditions and understand the safety requirements *</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="updates" name="updates">
+                    <label for="updates">I would like to receive updates about new volunteer opportunities</label>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn btn--outline" onclick="closeTaskRegistration()">Cancel</button>
+                <button type="button" class="btn btn--primary" onclick="submitTaskRegistration('${category}')">Submit Registration</button>
+            </div>
+        </div>
+    `;
+}
+
+function getSkillTags(category) {
+    const skillMap = {
+        infrastructure: ["Electrical work", "Construction", "Safety protocols", "Tool handling", "Problem solving"],
+        environment: ["Gardening", "Manual labor", "Environmental awareness", "Team work", "Physical fitness"],
+        safety: ["Traffic rules", "Public speaking", "Emergency response", "Communication", "Leadership"],
+        community: ["Event management", "Teaching", "Coordination", "Public speaking", "Community outreach"]
+    };
+    return skillMap[category] || [];
+}
+
+function initializeTaskRegistrationForm() {
+    // Skill tag selection
+    const skillTags = document.querySelectorAll('.skill-tag');
+    skillTags.forEach(tag => {
+        tag.addEventListener('click', function() {
+            this.classList.toggle('selected');
+        });
+    });
+
+    // Availability slot selection
+    const availabilitySlots = document.querySelectorAll('.availability-slot');
+    availabilitySlots.forEach(slot => {
+        slot.addEventListener('click', function() {
+            this.classList.toggle('selected');
+        });
+    });
+}
+
+function submitTaskRegistration(category) {
+    console.log('Submitting task registration for category:', category);
+    
+    // Get form data
+    const formData = {
+        category: category,
+        personalInfo: {
+            fullName: document.getElementById('fullName').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            age: document.getElementById('age').value,
+            address: document.getElementById('address').value
+        },
+        skills: Array.from(document.querySelectorAll('.skill-tag.selected')).map(tag => tag.textContent),
+        experience: document.getElementById('experience').value,
+        motivation: document.getElementById('motivation').value,
+        availability: Array.from(document.querySelectorAll('.availability-slot.selected')).map(slot => slot.dataset.slot),
+        availabilityNotes: document.getElementById('availability').value,
+        selectedTasks: Array.from(document.querySelectorAll('input[name="selectedTasks"]:checked')).map(input => input.value),
+        terms: document.getElementById('terms').checked,
+        updates: document.getElementById('updates').checked
+    };
+
+    // Validate required fields
+    if (!formData.personalInfo.fullName || !formData.personalInfo.email || !formData.personalInfo.phone || 
+        !formData.personalInfo.age || !formData.personalInfo.address || !formData.motivation || !formData.terms) {
+        showNotification('Please fill in all required fields', 'error');
+        return;
+    }
+
+    if (formData.selectedTasks.length === 0) {
+        showNotification('Please select at least one task you\'re interested in', 'error');
+        return;
+    }
+
+    if (formData.availability.length === 0) {
+        showNotification('Please select at least one availability slot', 'error');
+        return;
+    }
+
+    // Simulate form submission
+    showNotification('Registration submitted successfully! You will receive a confirmation email shortly.', 'success');
+    
+    // Close modal after a delay
+    setTimeout(() => {
+        closeTaskRegistration();
+        showRegistrationConfirmation(formData);
+    }, 2000);
+}
+
+function closeTaskRegistration() {
+    console.log('Closing task registration modal');
+    const modal = document.getElementById('task-registration-modal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+}
+
+function showRegistrationConfirmation(formData) {
+    const categoryData = taskCategories[formData.category];
+    const selectedTasks = categoryData.tasks.filter(task => formData.selectedTasks.includes(task.id));
+    
+    showNotification(`
+        🎉 Registration Successful!
+        
+        Category: ${categoryData.name}
+        Selected Tasks: ${selectedTasks.map(task => task.title).join(', ')}
+        Next Steps: You'll receive an email with task assignments and training materials within 24 hours.
+    `, 'success');
+}
+
+// Global functions for task registration
+window.showTaskRegistration = showTaskRegistration;
+window.closeTaskRegistration = closeTaskRegistration;
+window.submitTaskRegistration = submitTaskRegistration;
 
 // Update analytics with live data simulation
 function updateAnalytics() {

@@ -20,6 +20,7 @@
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#problem" class="nav-link">Problem & Solution</a></li>
                 <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#tasks" class="nav-link">Task Registration</a></li>
                 <li><a href="#technology" class="nav-link">Technology</a></li>
                 <li><a href="#architecture" class="nav-link">Architecture</a></li>
                 <li><a href="#impact" class="nav-link">Impact</a></li>
@@ -170,6 +171,7 @@
                 <p>Comprehensive tools for modern civic engagement</p>
             </div>
             
+            
             <div class="features-grid">
                 <div class="feature-card" data-feature="ai">
                     <div class="feature-icon">🤖</div>
@@ -182,6 +184,19 @@
                     </div>
                     <button class="btn btn--outline" onclick="showFeatureDemo('ai')">View Demo</button>
                 </div>
+                    
+                <div class="feature-card" data-feature="tasks">
+                    <div class="feature-icon">👷</div>
+                    <h3>Task Registration</h3>
+                    <p>Community volunteers can register for specific civic tasks</p>
+                    <div class="feature-benefits">
+                        <span class="benefit-tag">Volunteer engagement</span>
+                        <span class="benefit-tag">Skill matching</span>
+                        <span class="benefit-tag">Compensation system</span>
+                    </div>
+                    <button class="btn btn--outline" onclick="showFeatureDemo('tasks')">View Demo</button>
+                </div>
+            </div>
 
                 <div class="feature-card" data-feature="geo">
                     <div class="feature-icon">📍</div>
@@ -242,7 +257,6 @@
                     </div>
                     <button class="btn btn--outline" onclick="showFeatureDemo('gamification')">View Demo</button>
                 </div>
-            </div>
 
             <!-- Interactive Demo Panel -->
             <div class="demo-panel" id="demo-panel">
@@ -250,6 +264,155 @@
                     <button class="demo-close" onclick="closeDemo()">×</button>
                     <div id="demo-content-area">
                         <!-- Dynamic demo content will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Task Registration Section -->
+    <section id="tasks" class="tasks-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Community Task Registration</h2>
+                <p>Join hands with your community to make a difference. Register for specific tasks and contribute to civic improvement.</p>
+            </div>
+            
+            <div class="tasks-overview">
+                <div class="tasks-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">👷</div>
+                        <div class="stat-content">
+                            <div class="stat-number">1,247</div>
+                            <div class="stat-label">Active Volunteers</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">✅</div>
+                        <div class="stat-content">
+                            <div class="stat-number">3,456</div>
+                            <div class="stat-label">Tasks Completed</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🏆</div>
+                        <div class="stat-content">
+                            <div class="stat-number">89%</div>
+                            <div class="stat-label">Success Rate</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="task-categories">
+                <h3>Available Task Categories</h3>
+                <div class="categories-grid">
+                    <div class="category-card" data-category="infrastructure">
+                        <div class="category-icon">🛠️</div>
+                        <h4>Infrastructure Maintenance</h4>
+                        <p>Street light repairs, road maintenance, signboard installation</p>
+                        <div class="category-stats">
+                            <span class="task-count">23 Active Tasks</span>
+                            <span class="volunteer-count">156 Volunteers</span>
+                        </div>
+                        <button class="btn btn--primary" onclick="showTaskRegistration('infrastructure')">
+                            Register for Tasks
+                        </button>
+                    </div>
+
+                    <div class="category-card" data-category="environment">
+                        <div class="category-icon">🌱</div>
+                        <h4>Environmental Cleanup</h4>
+                        <p>Garbage collection, tree planting, water body cleaning</p>
+                        <div class="category-stats">
+                            <span class="task-count">18 Active Tasks</span>
+                            <span class="volunteer-count">203 Volunteers</span>
+                        </div>
+                        <button class="btn btn--primary" onclick="showTaskRegistration('environment')">
+                            Register for Tasks
+                        </button>
+                    </div>
+
+                    <div class="category-card" data-category="safety">
+                        <div class="category-icon">🛡️</div>
+                        <h4>Safety & Security</h4>
+                        <p>Traffic management, safety awareness, emergency response</p>
+                        <div class="category-stats">
+                            <span class="task-count">12 Active Tasks</span>
+                            <span class="volunteer-count">89 Volunteers</span>
+                        </div>
+                        <button class="btn btn--primary" onclick="showTaskRegistration('safety')">
+                            Register for Tasks
+                        </button>
+                    </div>
+
+                    <div class="category-card" data-category="community">
+                        <div class="category-icon">🤝</div>
+                        <h4>Community Development</h4>
+                        <p>Event organization, skill sharing, community outreach</p>
+                        <div class="category-stats">
+                            <span class="task-count">15 Active Tasks</span>
+                            <span class="volunteer-count">134 Volunteers</span>
+                        </div>
+                        <button class="btn btn--primary" onclick="showTaskRegistration('community')">
+                            Register for Tasks
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="task-registration-modal" id="task-registration-modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 id="modal-title">Task Registration</h3>
+                        <button class="modal-close" onclick="closeTaskRegistration()">×</button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="task-registration-content">
+                            <!-- Dynamic content will be inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="volunteer-showcase">
+                <h3>Volunteer Success Stories</h3>
+                <div class="stories-grid">
+                    <div class="story-card">
+                        <div class="story-avatar">👨‍🔧</div>
+                        <div class="story-content">
+                            <h4>Rajesh Kumar</h4>
+                            <p class="story-role">Infrastructure Volunteer</p>
+                            <p class="story-text">"I've helped fix 15 street lights in my area. The community recognition and the satisfaction of making a real difference keeps me motivated."</p>
+                            <div class="story-achievements">
+                                <span class="achievement">🏆 15 Tasks Completed</span>
+                                <span class="achievement">⭐ 4.9 Rating</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-card">
+                        <div class="story-avatar">👩‍🌾</div>
+                        <div class="story-content">
+                            <h4>Priya Sharma</h4>
+                            <p class="story-role">Environmental Volunteer</p>
+                            <p class="story-text">"Leading the tree plantation drive in our neighborhood was incredibly rewarding. We planted 200 trees and created a green corridor."</p>
+                            <div class="story-achievements">
+                                <span class="achievement">🌳 200 Trees Planted</span>
+                                <span class="achievement">👥 Team Leader</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-card">
+                        <div class="story-avatar">👨‍💼</div>
+                        <div class="story-content">
+                            <h4>Amit Singh</h4>
+                            <p class="story-role">Community Organizer</p>
+                            <p class="story-text">"Organizing safety awareness campaigns has helped reduce accidents in our area by 40%. The platform made coordination so easy."</p>
+                            <div class="story-achievements">
+                                <span class="achievement">📊 40% Accident Reduction</span>
+                                <span class="achievement">🎯 Campaign Leader</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
